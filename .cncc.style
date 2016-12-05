@@ -1,0 +1,4 @@
+class_decl: '^([A-Z][a-z]+)+$'
+field_decl: '^[a-z]+_$'
+var_decl: '^[a-z][a-z0-9]*$'
+namespace: '^[a-z]?$'

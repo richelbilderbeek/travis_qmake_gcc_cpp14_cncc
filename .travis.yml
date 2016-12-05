@@ -10,8 +10,13 @@ before_install:
 install: 
   # C++14
   - sudo apt-get install -qq g++-5
+  # CNCC
+  - sudo apt-get install libclang python python-yaml
+  - ./install_cncc.sh
 
 script: 
   - qmake
   - make
   - ./travis_qmake_gcc_cpp14_cncc
+  # CNCC
+  - ./cncc/cncc --style=.cncc.style main.cpp
